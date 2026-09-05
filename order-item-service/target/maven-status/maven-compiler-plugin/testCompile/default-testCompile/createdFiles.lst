@@ -1,0 +1,3 @@
+com/orderitem/orderitem/controller/OrderItemControllerTest.class
+com/orderitem/orderitem/service/OrderItemServiceTest.class
+com/orderitem/orderitem/repository/OrderItemRepositoryTest.class

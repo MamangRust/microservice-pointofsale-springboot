@@ -1,0 +1,3 @@
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/cashier-service/src/test/java/com/cashier/cashier/controller/CashierControllerTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/cashier-service/src/test/java/com/cashier/cashier/repository/CashierRepositoryTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/cashier-service/src/test/java/com/cashier/cashier/service/CashierServiceTest.java

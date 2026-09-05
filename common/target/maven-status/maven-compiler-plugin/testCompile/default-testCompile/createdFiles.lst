@@ -1,0 +1,8 @@
+com/common/dto/FileMetadataDtoTest.class
+com/common/dto/NotificationDtoTest.class
+com/common/event/EventEnvelopeTest.class
+com/common/clickhouse/ClickHouseConfigTest.class
+com/common/kafka/KafkaCommonConfigTest.class
+com/common/seed/PasswordUtilTest.class
+com/common/event/EventEnvelopeTest$1OrderPayload.class
+com/common/config/SecurityCommonConfigTest.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.role.role.service.RoleServiceTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.351 s -- in com.role.role.service.RoleServiceTest

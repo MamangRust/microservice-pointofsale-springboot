@@ -1,0 +1,7 @@
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/clickhouse/ClickHouseConfigTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/config/SecurityCommonConfigTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/dto/FileMetadataDtoTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/dto/NotificationDtoTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/event/EventEnvelopeTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/kafka/KafkaCommonConfigTest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/src/test/java/com/common/seed/PasswordUtilTest.java

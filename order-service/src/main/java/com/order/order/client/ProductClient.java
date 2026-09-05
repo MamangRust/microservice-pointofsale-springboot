@@ -1,0 +1,21 @@
+package com.order.order.client;
+
+import java.util.UUID;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.order.order.dto.Product;
+
+@FeignClient(name = "product", url = "${product.url}")
+public interface ProductClient {
+
+    @GetMapping("/products/{id}")
+    Product getProductById(@PathVariable UUID id);
+
+    @PostMapping("/products/{id}/decrease")
+    void decreaseStock(@PathVariable UUID id, @RequestParam(required = true) Integer quantity);
+}

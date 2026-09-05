@@ -1,0 +1,15 @@
+com/role/role/dto/RoleMapperImpl.class
+com/role/role/controller/RoleController.class
+com/role/role/dto/RoleResponse.class
+com/role/role/dto/RoleRequest.class
+com/role/role/service/RoleService.class
+com/role/role/repository/UserRoleRepository.class
+com/role/role/repository/RoleRepository.class
+com/role/role/entity/Role.class
+com/role/role/entity/UserRoleId.class
+com/role/role/RoleServiceApplication.class
+com/role/role/dto/RoleMapper.class
+com/role/role/entity/UserRole.class
+com/role/role/dto/ErrorResponse.class
+com/role/role/dto/AssignRoleRequest.class
+com/role/role/exc/GeneralExceptionHandler.class

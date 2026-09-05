@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.merchant.merchant.repository.MerchantRepositoryTest" time="20.495" tests="17" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/test-classes:/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/classes:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.3/spring-boot-starter-actuator-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.3/spring-boot-starter-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot/3.5.3/spring-boot-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.3/spring-boot-starter-logging-3.5.3.jar:/home/hoover/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/hoover/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/hoover/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/hoover/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/hoover/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/hoover/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/hoover/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.3/spring-boot-actuator-autoconfigure-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.3/spring-boot-actuator-3.5.3.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-observation/1.15.1/micrometer-observation-1.15.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-commons/1.15.1/micrometer-commons-1.15.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.1/micrometer-jakarta9-1.15.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-core/1.15.1/micrometer-core-1.15.1.jar:/home/hoover/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/hoover/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.3/spring-boot-starter-data-jpa-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.3/spring-boot-starter-jdbc-3.5.3.jar:/home/hoover/.m2/repository/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar:/home/hoover/.m2/repository/org/hibernate/orm/hibernate-core/6.6.18.Final/hibernate-core-6.6.18.Final.jar:/home/hoover/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/hoover/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/hoover/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/hoover/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/hoover/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/hoover/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/hoover/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/home/hoover/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/hoover/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/hoover/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/hoover/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/hoover/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/hoover/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/hoover/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/hoover/.m2/repository/org/springframework/data/spring-data-jpa/3.5.1/spring-data-jpa-3.5.1.jar:/home/hoover/.m2/repository/org/springframework/data/spring-data-commons/3.5.1/spring-data-commons-3.5.1.jar:/home/hoover/.m2/repository/org/springframework/spring-orm/6.2.8/spring-orm-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-context/6.2.8/spring-context-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-tx/6.2.8/spring-tx-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-beans/6.2.8/spring-beans-6.2.8.jar:/home/hoover/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/hoover/.m2/repository/org/springframework/spring-aspects/6.2.8/spring-aspects-6.2.8.jar:/home/hoover/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.3/spring-boot-starter-web-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.3/spring-boot-starter-json-3.5.3.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.3/spring-boot-starter-tomcat-3.5.3.jar:/home/hoover/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.42/tomcat-embed-core-10.1.42.jar:/home/hoover/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.42/tomcat-embed-websocket-10.1.42.jar:/home/hoover/.m2/repository/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-webmvc/6.2.8/spring-webmvc-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-expression/6.2.8/spring-expression-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.3/spring-boot-starter-security-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/spring-aop/6.2.8/spring-aop-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-config/6.5.1/spring-security-config-6.5.1.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-core/6.5.1/spring-security-core-6.5.1.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-web/6.5.1/spring-security-web-6.5.1.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.3/spring-boot-starter-validation-3.5.3.jar:/home/hoover/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.42/tomcat-embed-el-10.1.42.jar:/home/hoover/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/home/hoover/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/hoover/.m2/repository/org/flywaydb/flyway-core/11.7.2/flyway-core-11.7.2.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.19.1/jackson-dataformat-toml-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/home/hoover/.m2/repository/org/flywaydb/flyway-database-postgresql/11.7.2/flyway-database-postgresql-11.7.2.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/4.3.0/spring-cloud-starter-openfeign-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.3.0/spring-cloud-starter-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-context/4.3.0/spring-cloud-context-4.3.0.jar:/home/hoover/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.80/bcprov-jdk18on-1.80.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-openfeign-core/4.3.0/spring-cloud-openfeign-core-4.3.0.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-form-spring/13.6/feign-form-spring-13.6.jar:/home/hoover/.m2/repository/org/apache/commons/commons-text/1.13.0/commons-text-1.13.0.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-form/13.6/feign-form-13.6.jar:/home/hoover/.m2/repository/commons-fileupload/commons-fileupload/1.5/commons-fileupload-1.5.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.3.0/spring-cloud-commons-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-crypto/6.5.1/spring-security-crypto-6.5.1.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-core/13.6/feign-core-13.6.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-slf4j/13.6/feign-slf4j-13.6.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.3.0/spring-cloud-starter-netflix-eureka-client-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-netflix-eureka-client/4.3.0/spring-cloud-netflix-eureka-client-4.3.0.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/home/hoover/.m2/repository/com/netflix/eureka/eureka-client/2.0.4/eureka-client-2.0.4.jar:/home/hoover/.m2/repository/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.jar:/home/hoover/.m2/repository/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar:/home/hoover/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/hoover/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/home/hoover/.m2/repository/com/netflix/spectator/spectator-api/1.7.3/spectator-api-1.7.3.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/hoover/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/home/hoover/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/hoover/.m2/repository/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar:/home/hoover/.m2/repository/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar:/home/hoover/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar:/home/hoover/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar:/home/hoover/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar:/home/hoover/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/home/hoover/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/hoover/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/hoover/.m2/repository/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar:/home/hoover/.m2/repository/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar:/home/hoover/.m2/repository/com/netflix/servo/servo-core/0.5.3/servo-core-0.5.3.jar:/home/hoover/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/home/hoover/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/hoover/.m2/repository/org/codehaus/jettison/jettison/1.5.4/jettison-1.5.4.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter-loadbalancer/4.3.0/spring-cloud-starter-loadbalancer-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-loadbalancer/4.3.0/spring-cloud-loadbalancer-4.3.0.jar:/home/hoover/.m2/repository/io/projectreactor/reactor-core/3.7.7/reactor-core-3.7.7.jar:/home/hoover/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/hoover/.m2/repository/io/projectreactor/addons/reactor-extra/3.5.2/reactor-extra-3.5.2.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-cache/3.5.3/spring-boot-starter-cache-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/spring-context-support/6.2.8/spring-context-support-6.2.8.jar:/home/hoover/.m2/repository/com/stoyanr/evictor/1.0.0/evictor-1.0.0.jar:/home/hoover/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/home/hoover/.m2/repository/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar:/home/hoover/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:/home/hoover/.m2/repository/org/mapstruct/mapstruct/1.6.1/mapstruct-1.6.1.jar:/home/hoover/.m2/repository/org/mapstruct/mapstruct-processor/1.6.1/mapstruct-processor-1.6.1.jar:/home/hoover/.m2/repository/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar:/home/hoover/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/home/hoover/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/home/hoover/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/home/hoover/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/home/hoover/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/home/hoover/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/home/hoover/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/target/classes:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-amqp/3.5.3/spring-boot-starter-amqp-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/spring-messaging/6.2.8/spring-messaging-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/amqp/spring-rabbit/3.2.5/spring-rabbit-3.2.5.jar:/home/hoover/.m2/repository/org/springframework/amqp/spring-amqp/3.2.5/spring-amqp-3.2.5.jar:/home/hoover/.m2/repository/com/rabbitmq/amqp-client/5.25.0/amqp-client-5.25.0.jar:/home/hoover/.m2/repository/org/springframework/kafka/spring-kafka/3.3.7/spring-kafka-3.3.7.jar:/home/hoover/.m2/repository/org/springframework/retry/spring-retry/2.0.12/spring-retry-2.0.12.jar:/home/hoover/.m2/repository/org/apache/kafka/kafka-clients/3.9.1/kafka-clients-3.9.1.jar:/home/hoover/.m2/repository/com/github/luben/zstd-jni/1.5.6-4/zstd-jni-1.5.6-4.jar:/home/hoover/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/hoover/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-jdbc/0.7.2/clickhouse-jdbc-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-client/0.7.2/clickhouse-client-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-data/0.7.2/clickhouse-data-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-http-client/0.7.2/clickhouse-http-client-0.7.2.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/home/hoover/.m2/repository/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar:/home/hoover/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/home/hoover/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/home/hoover/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/hoover/.m2/repository/org/lz4/lz4-pure-java/1.8.0/lz4-pure-java-1.8.0.jar:/home/hoover/.m2/repository/com/clickhouse/jdbc-v2/0.7.2/jdbc-v2-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/client-v2/0.7.2/client-v2-0.7.2.jar:/home/hoover/.m2/repository/org/roaringbitmap/RoaringBitmap/0.9.47/RoaringBitmap-0.9.47.jar:/home/hoover/.m2/repository/org/roaringbitmap/shims/0.9.47/shims-0.9.47.jar:/home/hoover/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/hoover/.m2/repository/org/springframework/spring-jdbc/6.2.8/spring-jdbc-6.2.8.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.49.0/opentelemetry-sdk-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.49.0/opentelemetry-sdk-common-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.49.0/opentelemetry-sdk-trace-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.49.0/opentelemetry-sdk-metrics-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.49.0/opentelemetry-sdk-logs-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-otlp/1.49.0/opentelemetry-exporter-otlp-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-otlp-common/1.49.0/opentelemetry-exporter-otlp-common-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-common/1.49.0/opentelemetry-exporter-common-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-sender-okhttp/1.49.0/opentelemetry-exporter-sender-okhttp-1.49.0.jar:/home/hoover/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar:/home/hoover/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar:/home/hoover/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.25/kotlin-stdlib-common-1.9.25.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.25/kotlin-stdlib-jdk8-1.9.25.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.25/kotlin-stdlib-1.9.25.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.25/kotlin-stdlib-jdk7-1.9.25.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.49.0/opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-api/2.10.0/opentelemetry-instrumentation-api-2.10.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.44.1-alpha/opentelemetry-api-incubator-1.44.1-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-boot-starter/2.10.0/opentelemetry-spring-boot-starter-2.10.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-boot-autoconfigure/2.10.0/opentelemetry-spring-boot-autoconfigure-2.10.0.jar:/home/hoover/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-annotations-support/2.10.0-alpha/opentelemetry-instrumentation-annotations-support-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv-incubating/1.28.0-alpha/opentelemetry-semconv-incubating-1.28.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-kafka-clients-2.6/2.10.0-alpha/opentelemetry-kafka-clients-2.6-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-kafka-clients-common/2.10.0-alpha/opentelemetry-kafka-clients-common-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-mongo-3.1/2.10.0-alpha/opentelemetry-mongo-3.1-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-kafka-2.7/2.10.0-alpha/opentelemetry-spring-kafka-2.7-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-web-3.1/2.10.0-alpha/opentelemetry-spring-web-3.1-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-webmvc-5.3/2.10.0-alpha/opentelemetry-spring-webmvc-5.3-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-webflux-5.3/2.10.0-alpha/opentelemetry-spring-webflux-5.3-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-reactor-3.1/2.10.0-alpha/opentelemetry-reactor-3.1-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-micrometer-1.5/2.10.0-alpha/opentelemetry-micrometer-1.5-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-log4j-appender-2.17/2.10.0-alpha/opentelemetry-log4j-appender-2.17-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-log4j-context-data-2.17-autoconfigure/2.10.0-alpha/opentelemetry-log4j-context-data-2.17-autoconfigure-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-logback-mdc-1.0/2.10.0-alpha/opentelemetry-logback-mdc-1.0-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-jdbc/2.10.0-alpha/opentelemetry-jdbc-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.49.0/opentelemetry-sdk-extension-autoconfigure-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-sdk-autoconfigure-support/2.10.0-alpha/opentelemetry-sdk-autoconfigure-support-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-webmvc-6.0/2.10.0-alpha/opentelemetry-spring-webmvc-6.0-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-annotations/2.10.0/opentelemetry-instrumentation-annotations-2.10.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.49.0/opentelemetry-exporter-logging-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-resources/2.10.0-alpha/opentelemetry-resources-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-incubator/1.44.1-alpha/opentelemetry-sdk-extension-incubator-1.44.1-alpha.jar:/home/hoover/.m2/repository/org/snakeyaml/snakeyaml-engine/2.8/snakeyaml-engine-2.8.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.19.1/jackson-dataformat-yaml-2.19.1.jar:/home/hoover/.m2/repository/io/opentelemetry/contrib/opentelemetry-aws-resources/1.40.0-alpha/opentelemetry-aws-resources-1.40.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/contrib/opentelemetry-gcp-resources/1.40.0-alpha/opentelemetry-gcp-resources-1.40.0-alpha.jar:/home/hoover/.m2/repository/com/google/cloud/opentelemetry/detector-resources-support/0.33.0/detector-resources-support-0.33.0.jar:/home/hoover/.m2/repository/io/opentelemetry/contrib/opentelemetry-baggage-processor/1.40.0-alpha/opentelemetry-baggage-processor-1.40.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-runtime-telemetry-java17/2.10.0-alpha/opentelemetry-runtime-telemetry-java17-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-api-incubator/2.10.0-alpha/opentelemetry-instrumentation-api-incubator-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-runtime-telemetry-java8/2.10.0-alpha/opentelemetry-runtime-telemetry-java8-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-logback-appender-1.0/2.10.0-alpha/opentelemetry-logback-appender-1.0-2.10.0-alpha.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.3/spring-boot-starter-test-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-test/3.5.3/spring-boot-test-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.3/spring-boot-test-autoconfigure-3.5.3.jar:/home/hoover/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/hoover/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/hoover/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/hoover/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/hoover/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/hoover/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/home/hoover/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/hoover/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/hoover/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/hoover/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/hoover/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/hoover/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/hoover/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/hoover/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar:/home/hoover/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/hoover/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/hoover/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/hoover/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/hoover/.m2/repository/org/springframework/spring-core/6.2.8/spring-core-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-jcl/6.2.8/spring-jcl-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-test/6.2.8/spring-test-6.2.8.jar:/home/hoover/.m2/repository/org/xmlunit/xmlunit-core/2.10.2/xmlunit-core-2.10.2.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-testcontainers/3.5.3/spring-boot-testcontainers-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar:/home/hoover/.m2/repository/org/testcontainers/testcontainers/1.21.2/testcontainers-1.21.2.jar:/home/hoover/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/hoover/.m2/repository/org/hamcrest/hamcrest-core/3.0/hamcrest-core-3.0.jar:/home/hoover/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/home/hoover/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/home/hoover/.m2/repository/com/github/docker-java/docker-java-api/3.4.2/docker-java-api-3.4.2.jar:/home/hoover/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.4.2/docker-java-transport-zerodep-3.4.2.jar:/home/hoover/.m2/repository/com/github/docker-java/docker-java-transport/3.4.2/docker-java-transport-3.4.2.jar:/home/hoover/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/home/hoover/.m2/repository/org/testcontainers/junit-jupiter/1.21.2/junit-jupiter-1.21.2.jar:/home/hoover/.m2/repository/org/testcontainers/postgresql/1.21.2/postgresql-1.21.2.jar:/home/hoover/.m2/repository/org/testcontainers/jdbc/1.21.2/jdbc-1.21.2.jar:/home/hoover/.m2/repository/org/testcontainers/database-commons/1.21.2/database-commons-1.21.2.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="merchant-service"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/home/hoover/.sdkman/candidates/java/21.0.12-tem/lib"/>
+    <property name="sun.java.command" value="/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/surefire/surefirebooter-20260904114647638_236.jar /home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/surefire 2026-09-04T11-42-55_945-jvmRun1 surefire-20260904114647638_234tmp surefire_8-20260904114647638_235tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/test-classes:/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/classes:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.3/spring-boot-starter-actuator-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.3/spring-boot-starter-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot/3.5.3/spring-boot-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.3/spring-boot-starter-logging-3.5.3.jar:/home/hoover/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/hoover/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/hoover/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/hoover/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/hoover/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/hoover/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/hoover/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.3/spring-boot-actuator-autoconfigure-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.3/spring-boot-actuator-3.5.3.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-observation/1.15.1/micrometer-observation-1.15.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-commons/1.15.1/micrometer-commons-1.15.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.1/micrometer-jakarta9-1.15.1.jar:/home/hoover/.m2/repository/io/micrometer/micrometer-core/1.15.1/micrometer-core-1.15.1.jar:/home/hoover/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/hoover/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.3/spring-boot-starter-data-jpa-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.3/spring-boot-starter-jdbc-3.5.3.jar:/home/hoover/.m2/repository/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar:/home/hoover/.m2/repository/org/hibernate/orm/hibernate-core/6.6.18.Final/hibernate-core-6.6.18.Final.jar:/home/hoover/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/hoover/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/hoover/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/hoover/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/hoover/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/hoover/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/hoover/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/home/hoover/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/hoover/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/hoover/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/hoover/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/hoover/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/hoover/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/hoover/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/hoover/.m2/repository/org/springframework/data/spring-data-jpa/3.5.1/spring-data-jpa-3.5.1.jar:/home/hoover/.m2/repository/org/springframework/data/spring-data-commons/3.5.1/spring-data-commons-3.5.1.jar:/home/hoover/.m2/repository/org/springframework/spring-orm/6.2.8/spring-orm-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-context/6.2.8/spring-context-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-tx/6.2.8/spring-tx-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-beans/6.2.8/spring-beans-6.2.8.jar:/home/hoover/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/hoover/.m2/repository/org/springframework/spring-aspects/6.2.8/spring-aspects-6.2.8.jar:/home/hoover/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.3/spring-boot-starter-web-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.3/spring-boot-starter-json-3.5.3.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.3/spring-boot-starter-tomcat-3.5.3.jar:/home/hoover/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.42/tomcat-embed-core-10.1.42.jar:/home/hoover/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.42/tomcat-embed-websocket-10.1.42.jar:/home/hoover/.m2/repository/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-webmvc/6.2.8/spring-webmvc-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-expression/6.2.8/spring-expression-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.3/spring-boot-starter-security-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/spring-aop/6.2.8/spring-aop-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-config/6.5.1/spring-security-config-6.5.1.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-core/6.5.1/spring-security-core-6.5.1.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-web/6.5.1/spring-security-web-6.5.1.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.3/spring-boot-starter-validation-3.5.3.jar:/home/hoover/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.42/tomcat-embed-el-10.1.42.jar:/home/hoover/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/home/hoover/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/hoover/.m2/repository/org/flywaydb/flyway-core/11.7.2/flyway-core-11.7.2.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.19.1/jackson-dataformat-toml-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/home/hoover/.m2/repository/org/flywaydb/flyway-database-postgresql/11.7.2/flyway-database-postgresql-11.7.2.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/4.3.0/spring-cloud-starter-openfeign-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.3.0/spring-cloud-starter-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-context/4.3.0/spring-cloud-context-4.3.0.jar:/home/hoover/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.80/bcprov-jdk18on-1.80.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-openfeign-core/4.3.0/spring-cloud-openfeign-core-4.3.0.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-form-spring/13.6/feign-form-spring-13.6.jar:/home/hoover/.m2/repository/org/apache/commons/commons-text/1.13.0/commons-text-1.13.0.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-form/13.6/feign-form-13.6.jar:/home/hoover/.m2/repository/commons-fileupload/commons-fileupload/1.5/commons-fileupload-1.5.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.3.0/spring-cloud-commons-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/security/spring-security-crypto/6.5.1/spring-security-crypto-6.5.1.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-core/13.6/feign-core-13.6.jar:/home/hoover/.m2/repository/io/github/openfeign/feign-slf4j/13.6/feign-slf4j-13.6.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.3.0/spring-cloud-starter-netflix-eureka-client-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-netflix-eureka-client/4.3.0/spring-cloud-netflix-eureka-client-4.3.0.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/home/hoover/.m2/repository/com/netflix/eureka/eureka-client/2.0.4/eureka-client-2.0.4.jar:/home/hoover/.m2/repository/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.jar:/home/hoover/.m2/repository/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar:/home/hoover/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/hoover/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/home/hoover/.m2/repository/com/netflix/spectator/spectator-api/1.7.3/spectator-api-1.7.3.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/hoover/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/home/hoover/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/hoover/.m2/repository/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar:/home/hoover/.m2/repository/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar:/home/hoover/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar:/home/hoover/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar:/home/hoover/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar:/home/hoover/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/home/hoover/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/hoover/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/hoover/.m2/repository/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar:/home/hoover/.m2/repository/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar:/home/hoover/.m2/repository/com/netflix/servo/servo-core/0.5.3/servo-core-0.5.3.jar:/home/hoover/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/home/hoover/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/hoover/.m2/repository/org/codehaus/jettison/jettison/1.5.4/jettison-1.5.4.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-starter-loadbalancer/4.3.0/spring-cloud-starter-loadbalancer-4.3.0.jar:/home/hoover/.m2/repository/org/springframework/cloud/spring-cloud-loadbalancer/4.3.0/spring-cloud-loadbalancer-4.3.0.jar:/home/hoover/.m2/repository/io/projectreactor/reactor-core/3.7.7/reactor-core-3.7.7.jar:/home/hoover/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/hoover/.m2/repository/io/projectreactor/addons/reactor-extra/3.5.2/reactor-extra-3.5.2.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-cache/3.5.3/spring-boot-starter-cache-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/spring-context-support/6.2.8/spring-context-support-6.2.8.jar:/home/hoover/.m2/repository/com/stoyanr/evictor/1.0.0/evictor-1.0.0.jar:/home/hoover/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/home/hoover/.m2/repository/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar:/home/hoover/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:/home/hoover/.m2/repository/org/mapstruct/mapstruct/1.6.1/mapstruct-1.6.1.jar:/home/hoover/.m2/repository/org/mapstruct/mapstruct-processor/1.6.1/mapstruct-processor-1.6.1.jar:/home/hoover/.m2/repository/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar:/home/hoover/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/home/hoover/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/home/hoover/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/home/hoover/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/home/hoover/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/home/hoover/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/home/hoover/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/common/target/classes:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-amqp/3.5.3/spring-boot-starter-amqp-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/spring-messaging/6.2.8/spring-messaging-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/amqp/spring-rabbit/3.2.5/spring-rabbit-3.2.5.jar:/home/hoover/.m2/repository/org/springframework/amqp/spring-amqp/3.2.5/spring-amqp-3.2.5.jar:/home/hoover/.m2/repository/com/rabbitmq/amqp-client/5.25.0/amqp-client-5.25.0.jar:/home/hoover/.m2/repository/org/springframework/kafka/spring-kafka/3.3.7/spring-kafka-3.3.7.jar:/home/hoover/.m2/repository/org/springframework/retry/spring-retry/2.0.12/spring-retry-2.0.12.jar:/home/hoover/.m2/repository/org/apache/kafka/kafka-clients/3.9.1/kafka-clients-3.9.1.jar:/home/hoover/.m2/repository/com/github/luben/zstd-jni/1.5.6-4/zstd-jni-1.5.6-4.jar:/home/hoover/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/hoover/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-jdbc/0.7.2/clickhouse-jdbc-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-client/0.7.2/clickhouse-client-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-data/0.7.2/clickhouse-data-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/clickhouse-http-client/0.7.2/clickhouse-http-client-0.7.2.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/home/hoover/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/home/hoover/.m2/repository/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar:/home/hoover/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/home/hoover/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/home/hoover/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/hoover/.m2/repository/org/lz4/lz4-pure-java/1.8.0/lz4-pure-java-1.8.0.jar:/home/hoover/.m2/repository/com/clickhouse/jdbc-v2/0.7.2/jdbc-v2-0.7.2.jar:/home/hoover/.m2/repository/com/clickhouse/client-v2/0.7.2/client-v2-0.7.2.jar:/home/hoover/.m2/repository/org/roaringbitmap/RoaringBitmap/0.9.47/RoaringBitmap-0.9.47.jar:/home/hoover/.m2/repository/org/roaringbitmap/shims/0.9.47/shims-0.9.47.jar:/home/hoover/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/hoover/.m2/repository/org/springframework/spring-jdbc/6.2.8/spring-jdbc-6.2.8.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.49.0/opentelemetry-sdk-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.49.0/opentelemetry-sdk-common-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.49.0/opentelemetry-sdk-trace-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.49.0/opentelemetry-sdk-metrics-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.49.0/opentelemetry-sdk-logs-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-otlp/1.49.0/opentelemetry-exporter-otlp-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-otlp-common/1.49.0/opentelemetry-exporter-otlp-common-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-common/1.49.0/opentelemetry-exporter-common-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-sender-okhttp/1.49.0/opentelemetry-exporter-sender-okhttp-1.49.0.jar:/home/hoover/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar:/home/hoover/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar:/home/hoover/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.25/kotlin-stdlib-common-1.9.25.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.25/kotlin-stdlib-jdk8-1.9.25.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.25/kotlin-stdlib-1.9.25.jar:/home/hoover/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.25/kotlin-stdlib-jdk7-1.9.25.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.49.0/opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-api/2.10.0/opentelemetry-instrumentation-api-2.10.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.44.1-alpha/opentelemetry-api-incubator-1.44.1-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-boot-starter/2.10.0/opentelemetry-spring-boot-starter-2.10.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-boot-autoconfigure/2.10.0/opentelemetry-spring-boot-autoconfigure-2.10.0.jar:/home/hoover/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-annotations-support/2.10.0-alpha/opentelemetry-instrumentation-annotations-support-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv-incubating/1.28.0-alpha/opentelemetry-semconv-incubating-1.28.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-kafka-clients-2.6/2.10.0-alpha/opentelemetry-kafka-clients-2.6-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-kafka-clients-common/2.10.0-alpha/opentelemetry-kafka-clients-common-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-mongo-3.1/2.10.0-alpha/opentelemetry-mongo-3.1-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-kafka-2.7/2.10.0-alpha/opentelemetry-spring-kafka-2.7-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-web-3.1/2.10.0-alpha/opentelemetry-spring-web-3.1-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-webmvc-5.3/2.10.0-alpha/opentelemetry-spring-webmvc-5.3-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-webflux-5.3/2.10.0-alpha/opentelemetry-spring-webflux-5.3-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-reactor-3.1/2.10.0-alpha/opentelemetry-reactor-3.1-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-micrometer-1.5/2.10.0-alpha/opentelemetry-micrometer-1.5-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-log4j-appender-2.17/2.10.0-alpha/opentelemetry-log4j-appender-2.17-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-log4j-context-data-2.17-autoconfigure/2.10.0-alpha/opentelemetry-log4j-context-data-2.17-autoconfigure-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-logback-mdc-1.0/2.10.0-alpha/opentelemetry-logback-mdc-1.0-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-jdbc/2.10.0-alpha/opentelemetry-jdbc-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.49.0/opentelemetry-sdk-extension-autoconfigure-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-sdk-autoconfigure-support/2.10.0-alpha/opentelemetry-sdk-autoconfigure-support-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-spring-webmvc-6.0/2.10.0-alpha/opentelemetry-spring-webmvc-6.0-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-annotations/2.10.0/opentelemetry-instrumentation-annotations-2.10.0.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.49.0/opentelemetry-exporter-logging-1.49.0.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-resources/2.10.0-alpha/opentelemetry-resources-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-incubator/1.44.1-alpha/opentelemetry-sdk-extension-incubator-1.44.1-alpha.jar:/home/hoover/.m2/repository/org/snakeyaml/snakeyaml-engine/2.8/snakeyaml-engine-2.8.jar:/home/hoover/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.19.1/jackson-dataformat-yaml-2.19.1.jar:/home/hoover/.m2/repository/io/opentelemetry/contrib/opentelemetry-aws-resources/1.40.0-alpha/opentelemetry-aws-resources-1.40.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/contrib/opentelemetry-gcp-resources/1.40.0-alpha/opentelemetry-gcp-resources-1.40.0-alpha.jar:/home/hoover/.m2/repository/com/google/cloud/opentelemetry/detector-resources-support/0.33.0/detector-resources-support-0.33.0.jar:/home/hoover/.m2/repository/io/opentelemetry/contrib/opentelemetry-baggage-processor/1.40.0-alpha/opentelemetry-baggage-processor-1.40.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-runtime-telemetry-java17/2.10.0-alpha/opentelemetry-runtime-telemetry-java17-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-api-incubator/2.10.0-alpha/opentelemetry-instrumentation-api-incubator-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-runtime-telemetry-java8/2.10.0-alpha/opentelemetry-runtime-telemetry-java8-2.10.0-alpha.jar:/home/hoover/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-logback-appender-1.0/2.10.0-alpha/opentelemetry-logback-appender-1.0-2.10.0-alpha.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.3/spring-boot-starter-test-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-test/3.5.3/spring-boot-test-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.3/spring-boot-test-autoconfigure-3.5.3.jar:/home/hoover/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/hoover/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/hoover/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/hoover/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/hoover/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/hoover/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/home/hoover/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/hoover/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/hoover/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/hoover/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/hoover/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/hoover/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/hoover/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/hoover/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/hoover/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar:/home/hoover/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/hoover/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/hoover/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/hoover/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/hoover/.m2/repository/org/springframework/spring-core/6.2.8/spring-core-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-jcl/6.2.8/spring-jcl-6.2.8.jar:/home/hoover/.m2/repository/org/springframework/spring-test/6.2.8/spring-test-6.2.8.jar:/home/hoover/.m2/repository/org/xmlunit/xmlunit-core/2.10.2/xmlunit-core-2.10.2.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-testcontainers/3.5.3/spring-boot-testcontainers-3.5.3.jar:/home/hoover/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar:/home/hoover/.m2/repository/org/testcontainers/testcontainers/1.21.2/testcontainers-1.21.2.jar:/home/hoover/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/hoover/.m2/repository/org/hamcrest/hamcrest-core/3.0/hamcrest-core-3.0.jar:/home/hoover/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/home/hoover/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/home/hoover/.m2/repository/com/github/docker-java/docker-java-api/3.4.2/docker-java-api-3.4.2.jar:/home/hoover/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.4.2/docker-java-transport-zerodep-3.4.2.jar:/home/hoover/.m2/repository/com/github/docker-java/docker-java-transport/3.4.2/docker-java-transport-3.4.2.jar:/home/hoover/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/home/hoover/.m2/repository/org/testcontainers/junit-jupiter/1.21.2/junit-jupiter-1.21.2.jar:/home/hoover/.m2/repository/org/testcontainers/postgresql/1.21.2/postgresql-1.21.2.jar:/home/hoover/.m2/repository/org/testcontainers/jdbc/1.21.2/jdbc-1.21.2.jar:/home/hoover/.m2/repository/org/testcontainers/database-commons/1.21.2/database-commons-1.21.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/hoover"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-07-21"/>
+    <property name="java.home" value="/home/hoover/.sdkman/candidates/java/21.0.12-tem"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service/target/surefire/surefirebooter-20260904114647638_236.jar"/>
+    <property name="polyglot.engine.WarnInterpreterOnly" value="false"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.12+8-LTS"/>
+    <property name="user.name" value="hoover"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.14.0-37-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.12+8"/>
+    <property name="localRepository" value="/home/hoover/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="21.0.12"/>
+    <property name="user.dir" value="/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="2460972"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.12+8-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[merchant-service] "/>
+  </properties>
+  <testcase name="save_autogeneratedMerchantNoAndApiKeyAreUniqueAcrossRows" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.731">
+    <system-out><![CDATA[11:46:50.974 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.21.2
+11:46:51.690 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+11:46:53.119 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+11:46:53.126 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+11:46:53.190 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.7.1
+  API Version: 1.55
+  Operating System: Linux Mint 22.3
+  Total Memory: 19741 MB
+11:46:53.240 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+11:46:53.249 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+11:46:56.292 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Creating container for image: testcontainers/ryuk:0.12.0
+11:46:56.313 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.12.0, configFile: /home/hoover/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/hoover/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+11:46:56.882 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 is starting: 0f8bca9fc8507e3e2c098455710e8166ca2841acdd719bef1020b4aeb3b11eb7
+11:46:58.101 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 started in PT1.808428354S
+11:46:58.126 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+11:46:58.127 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+11:46:58.129 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+11:46:58.828 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.merchant.merchant.repository.MerchantRepositoryTest]: MerchantRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:47:00.027 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.merchant.merchant.MerchantServiceApplication for test class com.merchant.merchant.repository.MerchantRepositoryTest
+11:47:00.142 [main] INFO tc.postgres:15-alpine -- Creating container for image: postgres:15-alpine
+11:47:00.341 [main] INFO tc.postgres:15-alpine -- Container postgres:15-alpine is starting: b580999b0ab36301471304ca06669cb85de440135f6a00567e990394e7ef563e
+11:47:04.937 [main] INFO tc.postgres:15-alpine -- Container postgres:15-alpine started in PT4.795248216S
+11:47:04.938 [main] INFO tc.postgres:15-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:40460/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2026-09-04T11:47:07.270+07:00  INFO 2460972 --- [merchant-service] [           main] c.m.m.repository.MerchantRepositoryTest  : Starting MerchantRepositoryTest using Java 21.0.12 with PID 2460972 (started by hoover in /home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/merchant-service)
+2026-09-04T11:47:07.332+07:00  INFO 2460972 --- [merchant-service] [           main] c.m.m.repository.MerchantRepositoryTest  : No active profile set, falling back to 1 default profile: "default"
+2026-09-04T11:47:09.272+07:00  INFO 2460972 --- [merchant-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-04T11:47:09.883+07:00  INFO 2460972 --- [merchant-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 573 ms. Found 2 JPA repository interfaces.
+2026-09-04T11:47:12.285+07:00  INFO 2460972 --- [merchant-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:40460/test?loggerLevel=OFF (PostgreSQL 15.19)
+2026-09-04T11:47:12.496+07:00  INFO 2460972 --- [merchant-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-09-04T11:47:12.525+07:00  INFO 2460972 --- [merchant-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.097s)
+2026-09-04T11:47:12.596+07:00  INFO 2460972 --- [merchant-service] [           main] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-09-04T11:47:12.636+07:00  INFO 2460972 --- [merchant-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-09-04T11:47:13.155+07:00  INFO 2460972 --- [merchant-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-09-04T11:47:13.281+07:00  INFO 2460972 --- [merchant-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - init"
+2026-09-04T11:47:13.483+07:00  INFO 2460972 --- [merchant-service] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.132s)
+2026-09-04T11:47:14.060+07:00  INFO 2460972 --- [merchant-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-04T11:47:14.288+07:00  INFO 2460972 --- [merchant-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-09-04T11:47:14.411+07:00  INFO 2460972 --- [merchant-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-04T11:47:15.004+07:00  INFO 2460972 --- [merchant-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-04T11:47:15.058+07:00  INFO 2460972 --- [merchant-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-04T11:47:15.066+07:00  INFO 2460972 --- [merchant-service] [           main] com.clickhouse.jdbc.ClickHouseDriver     : ClickHouse JDBC driver version: clickhouse-jdbc 0.7.2 (revision: 33b1fad)
+2026-09-04T11:47:15.069+07:00  INFO 2460972 --- [merchant-service] [           main] com.clickhouse.jdbc.ClickHouseDriver     : v1 driver
+2026-09-04T11:47:15.121+07:00  INFO 2460972 --- [merchant-service] [           main] com.clickhouse.jdbc.ClickHouseDriver     : ClickHouse JDBC driver version: clickhouse-jdbc 0.7.2 (revision: 33b1fad)
+2026-09-04T11:47:15.122+07:00  INFO 2460972 --- [merchant-service] [           main] com.clickhouse.jdbc.ClickHouseDriver     : v1 driver
+2026-09-04T11:47:15.135+07:00  INFO 2460972 --- [merchant-service] [           main] com.clickhouse.jdbc.Driver               : ClickHouse JDBC driver version: 0.7.2-SNAPSHOT
+2026-09-04T11:47:15.176+07:00  INFO 2460972 --- [merchant-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@691eb389
+2026-09-04T11:47:15.178+07:00  INFO 2460972 --- [merchant-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-04T11:47:15.276+07:00  INFO 2460972 --- [merchant-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.19
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-04T11:47:16.566+07:00  INFO 2460972 --- [merchant-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-04T11:47:16.614+07:00  INFO 2460972 --- [merchant-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-04T11:47:17.181+07:00  INFO 2460972 --- [merchant-service] [           main] c.m.m.repository.MerchantRepositoryTest  : Started MerchantRepositoryTest in 11.464 seconds (process running for 29.477)
+Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/hoover/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="findByApiKey_returnsMatchingMerchant" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.117">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.api_key=?
+]]></system-out>
+  </testcase>
+  <testcase name="findByMerchantId_returnsEmptyWhenNoDocuments" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.023">
+    <system-out><![CDATA[Hibernate: 
+    select
+        md1_0.document_id,
+        md1_0.created_at,
+        md1_0.deleted_at,
+        md1_0.document_type,
+        md1_0.document_url,
+        md1_0.merchant_id,
+        md1_0.note,
+        md1_0.status,
+        md1_0.updated_at 
+    from
+        merchant_documents md1_0 
+    where
+        md1_0.merchant_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="save_rejectsDuplicateExplicitMerchantNo" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.027">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-09-04T11:47:18.084+07:00  WARN 2460972 --- [merchant-service] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-09-04T11:47:18.084+07:00 ERROR 2460972 --- [merchant-service] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "merchants_merchant_no_key"
+  Detail: Key (merchant_no)=(MCH-DUP-0001) already exists.
+]]></system-out>
+  </testcase>
+  <testcase name="findByUserId_returnsEmptyForUnknownUser" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.011">
+    <system-out><![CDATA[Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.user_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="save_persistsMerchantWithGeneratedIdTimestampsAndAutoGeneratedNoApiKey" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.01">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="findByMerchantNo_returnsMatchingMerchant" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.014">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.merchant_no=?
+]]></system-out>
+  </testcase>
+  <testcase name="findById_returnsSavedMerchant" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.017">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="save_persistsDocumentWithGeneratedIdAndTimestamps" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.016">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchant_documents
+        (created_at, deleted_at, document_type, document_url, merchant_id, note, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="findByApiKey_returnsEmptyForUnknownKey" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.014">
+    <system-out><![CDATA[Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.api_key=?
+]]></system-out>
+  </testcase>
+  <testcase name="findByUserId_returnsOnlyThatUsersMerchants" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.04">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.user_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="findByMerchantNo_returnsEmptyForUnknownNo" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.01">
+    <system-out><![CDATA[Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.merchant_no=?
+]]></system-out>
+  </testcase>
+  <testcase name="update_touchesUpdatedAtViaPreUpdate" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.024">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    update
+        merchants 
+    set
+        address=?,
+        api_key=?,
+        contact_email=?,
+        contact_phone=?,
+        deleted_at=?,
+        description=?,
+        merchant_no=?,
+        name=?,
+        status=?,
+        updated_at=?,
+        user_id=? 
+    where
+        merchant_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="findById_returnsEmptyWhenMissing" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.009">
+    <system-out><![CDATA[Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.merchant_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="findByMerchantId_returnsOnlyThatMerchantsDocuments" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.024">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchant_documents
+        (created_at, deleted_at, document_type, document_url, merchant_id, note, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchant_documents
+        (created_at, deleted_at, document_type, document_url, merchant_id, note, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchant_documents
+        (created_at, deleted_at, document_type, document_url, merchant_id, note, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        md1_0.document_id,
+        md1_0.created_at,
+        md1_0.deleted_at,
+        md1_0.document_type,
+        md1_0.document_url,
+        md1_0.merchant_id,
+        md1_0.note,
+        md1_0.status,
+        md1_0.updated_at 
+    from
+        merchant_documents md1_0 
+    where
+        md1_0.merchant_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="delete_removesDocumentRow" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.021">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        merchant_documents
+        (created_at, deleted_at, document_type, document_url, merchant_id, note, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    delete 
+    from
+        merchant_documents 
+    where
+        document_id=?
+Hibernate: 
+    select
+        md1_0.document_id,
+        md1_0.created_at,
+        md1_0.deleted_at,
+        md1_0.document_type,
+        md1_0.document_url,
+        md1_0.merchant_id,
+        md1_0.note,
+        md1_0.status,
+        md1_0.updated_at 
+    from
+        merchant_documents md1_0 
+    where
+        md1_0.document_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="delete_removesMerchantRow" classname="com.merchant.merchant.repository.MerchantRepositoryTest" time="0.012">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        merchants
+        (address, api_key, contact_email, contact_phone, created_at, deleted_at, description, merchant_no, name, status, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    delete 
+    from
+        merchants 
+    where
+        merchant_id=?
+Hibernate: 
+    select
+        m1_0.merchant_id,
+        m1_0.address,
+        m1_0.api_key,
+        m1_0.contact_email,
+        m1_0.contact_phone,
+        m1_0.created_at,
+        m1_0.deleted_at,
+        m1_0.description,
+        m1_0.merchant_no,
+        m1_0.name,
+        m1_0.status,
+        m1_0.updated_at,
+        m1_0.user_id 
+    from
+        merchants m1_0 
+    where
+        m1_0.merchant_id=?
+]]></system-out>
+  </testcase>
+</testsuite>

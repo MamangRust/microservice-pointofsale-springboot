@@ -1,0 +1,14 @@
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/RoleServiceApplication.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/controller/RoleController.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/dto/AssignRoleRequest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/dto/ErrorResponse.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/dto/RoleMapper.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/dto/RoleRequest.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/dto/RoleResponse.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/entity/Role.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/entity/UserRole.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/entity/UserRoleId.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/exc/GeneralExceptionHandler.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/repository/RoleRepository.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/repository/UserRoleRepository.java
+/home/hoover/Projects/java/quarkus/microservice-grpc/springboot/spring-boot-microservices-pos/role-service/src/main/java/com/role/role/service/RoleService.java

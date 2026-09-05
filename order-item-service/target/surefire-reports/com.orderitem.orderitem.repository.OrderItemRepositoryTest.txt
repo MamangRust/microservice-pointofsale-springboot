@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.orderitem.orderitem.repository.OrderItemRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.57 s -- in com.orderitem.orderitem.repository.OrderItemRepositoryTest
